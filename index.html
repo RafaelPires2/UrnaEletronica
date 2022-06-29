@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Boca de Urna</title>
+</head>
+<body>
+    <div class="container">
+        <main class="main">
+
+            <form id="urna" action="" name="urna">
+               
+                <div class="display">
+                    <img id="imagemcandidatos" class="imagem" src="./image/candidatos.jpg" alt="imagem candidato"><br>
+                
+                <div class="text-pres">
+                    <h1>"Presidento"</h1>            
+                    <input type="text" class="text1" name="text1" disabled>
+                    <h2>Luladrão</h2>
+                    <h2>Bolsogado</h2>
+                </div>
+
+                </div>
+
+            <div class="content">
+                <input type="button" class="btn num" name="btn1" value="1"
+                 onclick="displaynum(btn1.value)">
+                <input type="button" class="btn num" name="btn2" value="2"
+                 onclick="displaynum(btn2.value)">
+                <input type="button" class="btn num" name="btn3" value="3"
+                 onclick="displaynum(btn3.value)"><br>
+                
+                <input type="button" class="btn num" name="btn4" value="4"
+                 onclick="displaynum(btn4.value)">
+                <input type="button" class="btn num" name="btn5" value="5"
+                 onclick="displaynum(btn5.value)">
+                <input type="button" class="btn num" name="btn6" value="6"
+                 onclick="displaynum(btn6.value)"><br>
+
+                <input type="button" class="btn num" name="btn7" value="7"
+                 onclick="displaynum(btn7.value)">
+                <input type="button" class="btn num" name="btn8" value="8"
+                 onclick="displaynum(btn8.value)">
+                <input type="button" class="btn num" name="btn9" value="9"
+                 onclick="displaynum(btn9.value)"><br>
+
+                <input type="button" class="btn num zero" name="zero" value="0"
+                >
+                <input type="button" class="btn num" name="btn0" value="0"
+                 onclick="displaynum(btn0.value)">
+                <input type="button" class="btn num zero" name="zero" value="0"
+                ><br>
+                <div class="btnsConfirmation">
+                    <input type="button" class="btn branco" name="btnBranco" value="Branco"
+                    onclick="displaynum(btnBranco.value)">
+                    <input type="text" class="btn corrige" name="btnCorrige" value="Corrige"
+                    onclick="location.reload()">
+                    <input type="button" class="btn confirma" name="btnConfirma" value="Confirma"
+                    onclick="displaynum(btnConfirma.value)">
+                </div>       
+            </div>
+            </form>
+
+        </main>
+    </div>
+
+
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
