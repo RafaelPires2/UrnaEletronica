@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="container">
+        <header class="header">
+            <p>Essa "urna eletronica" não expressa ou representa qualquer posição partidaria. "LEVE A VIDA MAIS LEVE"</p>
+        </header>
         <main class="main">
 
             <form id="urna" action="" name="urna">
@@ -17,10 +20,10 @@
                     <img id="imagemcandidatos" class="imagem" src="./image/candidatos.jpg" alt="imagem candidato"><br>
                 
                 <div class="text-pres">
-                    <h1>"Presidento"</h1>            
-                    <input type="text" class="text1" name="text1" disabled>
-                    <h2>Luladrão</h2>
-                    <h2>Bolsogado</h2>
+                    <h1 class="title">"Presidento"</h1>            
+                    <input type="text" class="text1" name="text1" minlength="3" maxlength="3" disabled>
+                    <h2 class="nomeCandidato"></h2>
+                    
                 </div>
 
                 </div>
@@ -55,11 +58,11 @@
                 ><br>
                 <div class="btnsConfirmation">
                     <input type="button" class="btn branco" name="btnBranco" value="Branco"
-                    onclick="displaynum(btnBranco.value)">
+                    onclick="displaynum('OOO')">
                     <input type="text" class="btn corrige" name="btnCorrige" value="Corrige"
                     onclick="location.reload()">
                     <input type="button" class="btn confirma" name="btnConfirma" value="Confirma"
-                    onclick="displaynum(btnConfirma.value)">
+                    onclick="confirmaCandidate()">
                 </div>       
             </div>
             </form>
