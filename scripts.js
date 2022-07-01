@@ -1,12 +1,12 @@
 const candidate = {
-    Lula: {name:  'Luladrão', img: 'https://www.midianews.com.br//storage/webdisco/2016/01/30/438x291/310ba3d678232bf89ebae7f732cdbf98.jpg', id: 157},
-    Bolso: {name:  'Bolsogado', img: 'https://www.parlamentopiaui.com.br/uploads/imagens/bolsonaro-rindo%7C1605022277.jpg', id: 171},
-    Branco: {name:  'Branco', img: 'https://tmssl.akamaized.net/images/foto/galerie/branco-brazil-1990-1628520340-68576.jpg?lm=1628520354', id: 'OOO'},
-    NA: {name:  'Ladrão não encontrado', img: 'https://static.todamateria.com.br/upload/ba/nd/bandeira-do-brasil-og.jpg', id: null},
-    Fim: {name: '', img:'https://imagens.brasil.elpais.com/resizer/udDC9xw8G4MLxEO4lbjcrTkpZIM=/980x980/cloudfront-eu-central-1.images.arcpublishing.com/prisa/7XAYMNZ56VHQ3EP3L6LVO6CL7M.jpg'},
-    CandidatoValido: {name: 'Digite um candidato válido', img:''}
+    Lula: {name:  'LULADRÃO', img: './image/lula1000x600.png', id: 157},
+    Bolso: {name:  'BOLSOGADO', img: './image/bolso1000x600.png', id: 171},
+    Branco: {name:  'BRANCO', img: 'https://tmssl.akamaized.net/images/foto/galerie/branco-brazil-1990-1628520340-68576.jpg?lm=1628520354', id: 'OOO'},
+    NA: {name:  'Ladrão não encontrado', img: './image/na1000x600.png', id: null},
+    Fim: {name: '', img:'./image/fim1000x600.png'},
+    CandidatoValido: {name: 'Digite um candidato válido', img:'./image/1000x600.png'}
   }
-
+TotalVotos()
 
 function displaynum(n1) {
   const value = urna.text1.value + n1
@@ -55,8 +55,27 @@ function displaynum(n1) {
     } else {
         changeCandidate(candidate.CandidatoValido)
     }   
-        
-	}
+    
+ }
+
+
+  function TotalVotos() {
+    let votosLula = document.querySelector('.TVNumLula').innerText;
+    let votosBolso = document.querySelector('.TVNumBolso').innerText;
+    let resultado = parseInt(votosLula) + parseInt(votosBolso);
+    document.querySelector('.totalVotosNum').innerHTML = resultado;
+
+    // let PorcentLula = document.querySelector('.PorcentLula').innerText;
+    // let PorcentBolso = document.querySelector('.PorcentBolso').innerText;
+    let resultLula = votosLula / resultado;
+    document.querySelector('.PorcentLula').innerHTML = resultLula.toFixed(2)*100 + "%"
+
+    let resultBolso = votosBolso / resultado;
+    document.querySelector('.PorcentBolso').innerHTML = resultBolso.toFixed(2)*100 + "%";
+    
+  
+  }
+  
 
 
 // salvar cookies 

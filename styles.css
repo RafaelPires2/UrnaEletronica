@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -25,8 +26,8 @@
 
 #urna {
     background: white;
-    width: 600px;
-    height: 700px;
+    width: 35%;
+    height: 85%;
     border: 10px solid rgb(32, 28, 28);
     display: flex;
     align-items: center;
@@ -37,13 +38,14 @@
 }
 
 .display {
-    border: 5px solid black;
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 10px;
     width: 100%;
-    height: 300px;
+    height: 50%;
+    margin: 10px 0px;
     padding: 5px;
     display: flex;
-    margin-bottom: 15px;
+    justify-content: center;
     text-align: center;
     align-items: center;
 }
@@ -52,15 +54,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    width: 40%;
+    padding: 0rem 1rem;
+    width: 30%;
 }
 
 .imagem {
     border: 5px solid black;
-    width: 350px;
-    height: 250px;
-
+    width: 60%;
 }
 
 .content {
@@ -69,21 +69,23 @@
 
 input {
     border-radius: 15px;
-    width: 70px;
-    height: 70px;
-    margin: 3px;
+    width: 6rem;
+    height: 5rem;
 }
 
 h1 {
-    font-size: 40px;
-    margin-top: -50px;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom:5% ;
+}
+.datafalha{
+    color: red;
 }
 
 .num {
     background: rgb(0, 0, 0);
     color: white;
-    font-size: 30px;
+    font-size: 2rem;
+    margin: 1%;
 }
 
 .zero {
@@ -95,41 +97,48 @@ h1 {
 .branco {
     background: rgb(0, 0, 0);
     color: white;
-    font-size: 25px;
-    width: 120px;
+    font-size: 2rem;
+    width: 10rem;
     border: none;
     text-align: center;
-
 }
 
 .corrige {
     background: red;
     color: white;
-    font-size: 25px;
-    width: 120px;
+    font-size: 2rem;
+    width: 10rem;
     border: none;
     text-align: center;
+    margin:0.5rem;
 }
 
 .confirma {
     background: green;
     color: white;
-    font-size: 25px;
-    width: 120px;
+    font-size: 2rem;
+    width: 10rem;
     border: none;
     text-align: center;
 }
 
 .text1 {
     width: 100%;
-    height: 50px;
+    height: 3.5rem;
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: 700;
 }
 .nomeCandidato{
-    margin-top: 25px;
-    font-size: 30px;
+    margin-top: 2%;
+    font-size: 1 rem;
+}
+.Placar{
+    background: red;
+    color:white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
 }
