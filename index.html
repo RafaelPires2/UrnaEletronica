@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
     <title>Boca de Urna</title>
 </head>
 <body>
@@ -31,6 +34,7 @@
                         Bolsogado: 171<h2><br>
                     
                     <h2 class="datafalha">Data Falha</h2>
+                <div class="text-datafalha">
                     <h3 class="totalVotosText">Total de Votos:
                     <span class="totalVotosNum"></span></h3>
 
@@ -41,7 +45,7 @@
                     <h3 class="TVTextBolso">Bolsinho: 
                     <span class="TVNumBolso">70</span>
                     </h3>
-
+                </div>
                     <div class="Placar">
                         <span>Lula:</span>
                         <span class="PorcentLula">1</span>
@@ -97,6 +101,62 @@
 
 
 
+<!-- --------- firebase ---------- -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+    
+    import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js';
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAbXggEvAOxILfIcsDqSxg2YCLzvjKPKaI",
+      authDomain: "urnaeletronica-87283.firebaseapp.com",
+      projectId: "urnaeletronica-87283",
+      storageBucket: "urnaeletronica-87283.appspot.com",
+      messagingSenderId: "819076012701",
+      appId: "1:819076012701:web:87a4eaee72b83784c29274",
+      measurementId: "G-ZEKTGFRMLP"
+    };
+
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+// Get a list of cities from your database
+    async function getCandidatos(db) {
+        const citiesCol = collection(db, 'candidatos');
+        const citySnapshot = await getDocs(citiesCol);
+        const cityList = citySnapshot.docs.map(doc => doc.data());
+        console.log(cityList)
+        return cityList;
+    }
+
+    getCandidatos(db)
+
+
+
+
+
+  </script>
+
+
+
+<!-- --------- firebase ---------- -->
+
+    <script src="./firebase.js"></script>
     <script src="./scripts.js"></script>
 </body>
 </html>

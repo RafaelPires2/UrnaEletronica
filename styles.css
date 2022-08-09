@@ -27,7 +27,7 @@
 #urna {
     background: white;
     width: 35%;
-    height: 85%;
+    height: 80%;
     border: 10px solid rgb(32, 28, 28);
     display: flex;
     align-items: center;
@@ -48,6 +48,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+
 }
 
 .text-pres {
@@ -69,16 +70,18 @@
 
 input {
     border-radius: 15px;
-    width: 6rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 h1 {
-    font-size: 3em;
-    margin-bottom:5% ;
+    font-size: 2em;
+    margin-bottom: 2%;
 }
-.datafalha{
+
+.datafalha {
     color: red;
+    font-size: 1.2rem;
 }
 
 .num {
@@ -86,6 +89,9 @@ h1 {
     color: white;
     font-size: 2rem;
     margin: 1%;
+}
+.num:hover {
+    background: rgb(0, 59, 63);
 }
 
 .zero {
@@ -97,47 +103,64 @@ h1 {
 .branco {
     background: rgb(0, 0, 0);
     color: white;
-    font-size: 2rem;
-    width: 10rem;
+    font-size: 1.5rem;
+    width: 7rem;
     border: none;
     text-align: center;
+}
+.branco:hover{
+    background: rgb(0, 59, 63);
 }
 
 .corrige {
     background: red;
     color: white;
-    font-size: 2rem;
-    width: 10rem;
+    font-size: 1.5rem;
+    width: 7rem;
     border: none;
     text-align: center;
-    margin:0.5rem;
+    margin: 0.5rem;
+}
+.corrige:hover {
+    background: rgb(160, 2, 2);
+   
 }
 
 .confirma {
     background: green;
     color: white;
-    font-size: 2rem;
-    width: 10rem;
+    font-size: 1.5rem;
+    width: 7.5rem;
     border: none;
     text-align: center;
+}
+.confirma:hover{
+    background: rgb(2, 184, 2);
 }
 
 .text1 {
     width: 100%;
-    height: 3.5rem;
+    height: 3rem;
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
-.nomeCandidato{
-    margin-top: 2%;
-    font-size: 1 rem;
+
+.text-datafalha {
+    font-size: 0.8rem;
 }
-.Placar{
+
+.nomeCandidato {
+    margin-top: 2%;
+    font-size: 1.2rem;
+    margin-bottom: -20px;
+}
+
+.Placar {
     background: red;
-    color:white;
+    color: white;
     border: 1px solid black;
     border-radius: 10px;
     padding: 5px;

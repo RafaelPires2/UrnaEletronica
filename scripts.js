@@ -19,6 +19,8 @@ function displaynum(n1) {
     const candidateImageElement = document.querySelector('.imagem');
     candidateImageElement.setAttribute('src', candidate.img);
     candidateElement.innerText = candidate.name;
+    
+
  }
 
  function validate(value){
@@ -37,7 +39,7 @@ function displaynum(n1) {
             changeCandidate(candidate.Branco);
         } else {
           changeCandidate(candidate.NA);
-        }
+          }
       }
 
  }
@@ -53,7 +55,7 @@ function displaynum(n1) {
         document.urna.text1.value = ""
 
     } else {
-        changeCandidate(candidate.CandidatoValido)
+        changeCandidate(candidate.CandidatoValido);
     }   
     
  }
@@ -65,8 +67,6 @@ function displaynum(n1) {
     let resultado = parseInt(votosLula) + parseInt(votosBolso);
     document.querySelector('.totalVotosNum').innerHTML = resultado;
 
-    // let PorcentLula = document.querySelector('.PorcentLula').innerText;
-    // let PorcentBolso = document.querySelector('.PorcentBolso').innerText;
     let resultLula = votosLula / resultado;
     document.querySelector('.PorcentLula').innerHTML = resultLula.toFixed(2)*100 + "%"
 
@@ -75,10 +75,6 @@ function displaynum(n1) {
     
   
   }
-  
-
 
 // salvar cookies 
-// lista de candidatos
-// resultados - quantidade de votos e %
 // firebase - guardar dados 
